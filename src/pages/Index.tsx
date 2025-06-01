@@ -6,6 +6,7 @@ import {Badge} from "@/components/ui/badge";
 import {Star, Calendar, Clock} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {useNavigate} from "react-router-dom";
+import {carouselMovies} from "@/config/movies";
 
 const fetchMovies = async () => {
   // Replace this with your actual data fetching logic from Firebase or any other source
@@ -123,7 +124,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Carousel */}
-      {featuredMovies.length > 0 && <MovieCarousel movies={featuredMovies} />}
+      {featuredMovies.length > 0 && <MovieCarousel movies={carouselMovies} />}
 
       {/* Movies Grid */}
       <div className="container mx-auto px-4 py-8">

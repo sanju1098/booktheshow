@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
-import {Star, Play, ChevronLeft, ChevronRight} from "lucide-react";
+import {Star, ChevronLeft, ChevronRight} from "lucide-react";
 import {useNavigate} from "react-router-dom";
 
 const MovieCarousel = ({movies}: any) => {
@@ -95,12 +95,6 @@ const MovieCarousel = ({movies}: any) => {
                 onClick={() => navigate(`/movie/${currentMovie.id}`)}
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold">
                 Book Tickets
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg font-semibold bg-transparent">
-                <Play className="w-5 h-5 mr-2 fill-current" />
-                Watch Trailer
               </Button>
             </div>
           </div>
