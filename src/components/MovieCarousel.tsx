@@ -11,7 +11,7 @@ const MovieCarousel = ({movies}: any) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % movies.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, [movies.length]);
@@ -32,7 +32,7 @@ const MovieCarousel = ({movies}: any) => {
     <div className="relative h-96 md:h-[500px] overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
+        className="absolute inset-0 bg-cover bg-center transition-all duration-1000 z-0 pointer-events-none"
         style={{backgroundImage: `url(${currentMovie.banner})`}}>
         <div className="absolute inset-0 bg-black/60" />
       </div>
@@ -40,13 +40,13 @@ const MovieCarousel = ({movies}: any) => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all">
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all">
         <ChevronLeft className="w-6 h-6" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all">
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all">
         <ChevronRight className="w-6 h-6" />
       </button>
 
