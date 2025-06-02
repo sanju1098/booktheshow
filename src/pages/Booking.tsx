@@ -65,7 +65,7 @@ const Booking = () => {
     );
   }
 
-  const {movie, theater, showtime, date} = bookingData;
+  const {movie, theater, showtime, date, poster} = bookingData;
 
   const handleSeatClick = (seatId: string) => {
     setSelectedSeats((prev: any) =>
@@ -120,7 +120,7 @@ const Booking = () => {
           <CardContent className="p-4 md:p-6">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
               <img
-                src={movie.poster}
+                src={poster}
                 alt={movie.title}
                 className="w-20 h-28 md:w-24 md:h-36 object-cover rounded-lg mx-auto md:mx-0"
               />

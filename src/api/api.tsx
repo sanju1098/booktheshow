@@ -140,3 +140,22 @@ export const useUpcomingMovies = () => {
     enabled: genres.length > 0,
   });
 };
+
+// Fetch movie details by ID
+const fetchMovieById = async (id: string | number) => {
+  const res = await fetch(
+    `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=${LANGUAGE}`,
+  );
+  if (!res.ok) throw new Error("Failed to fetch movie details");
+  const data = await res.json();
+  return data;
+};
+
+// React Query hook to get movie details by ID
+export const useMovieById = (id?: string | number) => {
+  return useQuery({
+    queryKey: ["movie", id],
+    queryFn: () => fetchMovieById(id!),
+    enabled: !!id, // only fetch if id is provided
+  });
+};
