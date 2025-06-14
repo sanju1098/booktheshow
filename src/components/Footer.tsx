@@ -6,6 +6,8 @@ import {
   Mail,
   Phone,
   MapPin,
+  User,
+  ExternalLink,
 } from "lucide-react";
 
 const Footer = () => {
@@ -106,7 +108,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-red-600" />
-                <span className="text-gray-300">+91 80 4718 8000</span>
+                <span className="text-gray-300">+91 90 1234 5678</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-red-600" />
@@ -117,6 +119,17 @@ const Footer = () => {
                 <span className="text-gray-300">
                   Bangalore, Karnataka, India
                 </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <User className="w-4 h-4 text-red-600 mt-1" />
+                <a
+                  href="https://sanjay-dev-beta.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 underline">
+                  Developer (Sanjay Kumar)
+                </a>
+                <ExternalLink className="w-5 h-5" />
               </div>
             </div>
           </div>

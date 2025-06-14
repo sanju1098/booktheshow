@@ -3,7 +3,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
-import {Calendar, MapPin, Star, ArrowLeft, X} from "lucide-react";
+import {Calendar, MapPin, Star, ArrowLeft} from "lucide-react";
 import {useCityContext} from "@/components/Navbar";
 import {motion} from "framer-motion";
 import {auth} from "@/lib/firebase";

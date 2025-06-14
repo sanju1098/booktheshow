@@ -204,11 +204,13 @@ const Index = () => {
   const {selectedCity} = useCityContext();
 
   const {data: movies = [], isLoading, error} = useFilteredMovies();
-  const {data: popular = [], isLoading: loadingPopular} = usePopularMovies();
+  const {data: popular = []} = usePopularMovies();
   const {data: nowPlaying = [], isLoading: loadingNow} = useNowPlayingMovies();
   const {data: upcoming = [], isLoading: loadingUpcoming} = useUpcomingMovies();
 
   const [searchQuery, setSearchQuery] = useState("");
+
+  console.log();
 
   const handleSearch = (e: any) => {
     e.preventDefault();
