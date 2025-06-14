@@ -130,8 +130,9 @@ const Confirmation = () => {
 
               <div className="space-y-4">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
+                  {/* {JSON.stringify(movie)} */}
                   <img
-                    src={movie.poster}
+                    src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                     alt={movie.title}
                     className="w-20 h-28 md:w-24 md:h-36 object-cover rounded-lg mx-auto md:mx-0"
                   />
@@ -139,9 +140,7 @@ const Confirmation = () => {
                     <h3 className="text-lg md:text-xl font-semibold">
                       {movie.title}
                     </h3>
-                    <p className="text-gray-600">
-                      {movie.genre} • {movie.duration}
-                    </p>
+                    <p className="text-gray-600">{movie.overview}</p>
                   </div>
                 </div>
 

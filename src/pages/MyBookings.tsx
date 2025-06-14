@@ -22,35 +22,35 @@ const MyBookings = () => {
   }, [navigate]);
 
   // Sample booking data (in real app, fetch from Firebase/Supabase)
-  const bookings = [
-    {
-      id: 1,
-      movieTitle: "Avengers: Endgame",
-      moviePoster:
-        "https://images.unsplash.com/photo-1478720568477-b2709d01a50b?w=300&h=450&fit=crop",
-      theaterName: "PVR Cinemas - Forum Mall",
-      location: "Koramangala, Bangalore",
-      date: "2024-06-15",
-      time: "6:00 PM",
-      seats: ["E5", "E6"],
-      amount: 700,
-      bookingId: "BTS001",
-      status: "confirmed",
-    },
-    {
-      id: 2,
-      movieTitle: "Spider-Man: No Way Home",
-      moviePoster:
-        "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=300&h=450&fit=crop",
-      theaterName: "INOX - Mantri Square",
-      location: "Malleshwaram, Bangalore",
-      date: "2024-06-10",
-      time: "9:30 PM",
-      seats: ["F3", "F4", "F5"],
-      amount: 950,
-      bookingId: "BTS002",
-      status: "completed",
-    },
+  const bookings: any = [
+    // {
+    //   id: 1,
+    //   movieTitle: "Avengers: Endgame",
+    //   moviePoster:
+    //     "https://images.unsplash.com/photo-1478720568477-b2709d01a50b?w=300&h=450&fit=crop",
+    //   theaterName: "PVR Cinemas - Forum Mall",
+    //   location: "Koramangala, Bangalore",
+    //   date: "2024-06-15",
+    //   time: "6:00 PM",
+    //   seats: ["E5", "E6"],
+    //   amount: 700,
+    //   bookingId: "BTS001",
+    //   status: "confirmed",
+    // },
+    // {
+    //   id: 2,
+    //   movieTitle: "Spider-Man: No Way Home",
+    //   moviePoster:
+    //     "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=300&h=450&fit=crop",
+    //   theaterName: "INOX - Mantri Square",
+    //   location: "Malleshwaram, Bangalore",
+    //   date: "2024-06-10",
+    //   time: "9:30 PM",
+    //   seats: ["F3", "F4", "F5"],
+    //   amount: 950,
+    //   bookingId: "BTS002",
+    //   status: "completed",
+    // },
   ];
 
   if (!user) {
@@ -94,7 +94,7 @@ const MyBookings = () => {
           </div>
         ) : (
           <div className="space-y-6">
-            {bookings.map(booking => (
+            {bookings?.map((booking: any) => (
               <Card key={booking.id} className="overflow-hidden">
                 <CardContent className="p-0">
                   <div className="flex flex-col md:flex-row">
